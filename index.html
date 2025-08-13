@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sam Needs · Test Professional</title>
+  <meta name="description" content="Sam Needs · SC‑cleared Test Manager/Test Lead. QA leadership, non‑functional testing, automation with Playwright, and quality strategy." />
+  <meta property="og:title" content="Sam Needs · Test Professional" />
+  <meta property="og:description" content="SC‑cleared Test Manager/Test Lead. QA leadership, non‑functional testing, automation with Playwright, and quality strategy." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#2b59ff" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#0b1020;              /* deep navy */
+      --bg2:#0f172a;              /* slate */
+      --bg3:#1e293b;              /* slate deeper */
+      --card:rgba(17,19,24,0.88);
+      --text:#e6e6ea;
+      --muted:#a9afbd;
+      --accent:#2b59ff;
+      --accent-2:#68e1fd;
+      --stroke:rgba(255,255,255,0.08);
+      --shadow:0 12px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 600px at 85% -10%, rgba(104,225,253,.10), transparent 60%),
+        radial-gradient(900px 500px at 10% -20%, rgba(43,89,255,.15), transparent 60%),
+        linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 42%, var(--bg3) 100%);
+      color:var(--text);
+      font:16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 80px}
+
+    /* Header */
+    header{display:flex;gap:28px;align-items:center;padding:24px;border:1px solid var(--stroke);
+      background:linear-gradient(135deg, rgba(43,89,255,0.18), rgba(104,225,253,0.10));
+      border-radius:var(--radius);box-shadow:var(--shadow)}
+    .avatar{width:92px;height:92px;border-radius:16px;overflow:hidden;flex-shrink:0;box-shadow:0 6px 16px rgba(43,89,255,0.45);background:linear-gradient(135deg, var(--accent), var(--accent-2));display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .hgroup h1{margin:0;font-size:28px;letter-spacing:.2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .hgroup p{margin:6px 0 0;color:var(--muted)}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .badge{padding:6px 10px;border-radius:999px;background:linear-gradient(135deg,rgba(43,89,255,0.30),rgba(104,225,253,0.15));border:1px solid var(--stroke);font-size:13px;color:#d9ecff}
+
+    /* Nav */
+    nav{margin:18px 0 26px;display:flex;gap:10px;flex-wrap:wrap}
+    nav a{padding:10px 14px;border:1px solid var(--stroke);border-radius:12px;background:rgba(255,255,255,.02);transition:background .2s,border-color .2s,transform .15s}
+    nav a:hover{border-color:rgba(104,225,253,0.5);background:linear-gradient(135deg,rgba(43,89,255,0.20),rgba(104,225,253,0.10));transform:translateY(-1px)}
+
+    /* Layout */
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    @media (max-width: 900px){.grid{grid-template-columns:1fr}}
+
+    section.card{border:1px solid var(--stroke);border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);padding:22px}
+    section.card h2{margin:0 0 12px;font-size:20px;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .muted{color:var(--muted)}
+
+    /* Pills */
+    .pill-list{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{background:linear-gradient(135deg,rgba(43,89,255,0.15),rgba(104,225,253,0.08));border:1px solid var(--stroke);padding:8px 12px;border-radius:999px;font-size:14px}
+
+    /* Timeline */
+    .timeline{position:relative;padding-left:20px}
+    .timeline:before{content:"";position:absolute;left:7px;top:4px;bottom:4px;width:2px;background:linear-gradient(var(--accent),transparent)}
+    .tl-item{position:relative;margin:0 0 18px;padding-left:16px}
+    .tl-item:before{content:"";position:absolute;left:-4px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(43,89,255,.18)}
+    .title{font-weight:600}
+    .org{opacity:.9}
+    .meta{color:var(--muted);font-size:14px}
+
+    /* Kudos */
+    .kudos{display:grid;gap:10px}
+    .kudo{border:1px solid var(--stroke);border-radius:14px;padding:12px;background:linear-gradient(135deg,rgba(43,89,255,0.08),rgba(104,225,253,0.04))}
+
+    /* Footer/CTAs */
+    footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .cta{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#061022;font-weight:600;border:1px solid rgba(255,255,255,.25)}
+    .ghost{background:transparent;color:var(--text);border:1px solid var(--stroke)}
+
+    /* Helpers */
+    .rows{display:grid;gap:10px}
+    .sr-only{position:absolute;clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sam Needs",
+    "jobTitle": "Test Manager / Test Lead",
+    "email": "sam.needs@gmail.com",
+    "telephone": "+447415883191",
+    "url": "https://www.linkedin.com/in/samneeds/",
+    "knowsAbout": [
+      "QA Leadership","Test Strategy","Non-functional testing","Accessibility","Performance testing","Test Automation","Playwright","JIRA","Confluence","Azure DevOps"
+    ],
+    "address": {"@type":"PostalAddress","addressLocality":"Coleford","postalCode":"GL16","addressCountry":"UK"}
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">
+        <!-- Primary: your uploaded file name; Fallback: /images/profile.jpg if you rename/move later -->
+        <img src="mhorwood_Welsh_Revenue_Authority_100425_11248 (1) (1) -square_14_50_35_2025-08-08.jpg" onerror="this.onerror=null;this.src='images/profile.jpg'" alt="Sam Needs">
+      </div>
+      <div class="hgroup">
+        <h1>Sam Needs</h1>
+        <p>SC‑cleared Test Manager/Test Lead · QA leadership · Non‑functional testing · Playwright automation</p>
+        <div class="badges">
+          <span class="badge">ISTQB CTFL + Agile Ext.</span>
+          <span class="badge">11+ years</span>
+          <span class="badge">Agile and Waterfall</span>
+          <span class="badge">Public and Private Sector</span>
+        </div>
+      </div>
+    </header>
+
+    <nav aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="grid">
+      <!-- Left column -->
+      <section id="about" class="card">
+        <h2>About</h2>
+        <p>Hands on Test Manager and Test Lead with a record of building QA functions, shaping strategy and delivering value across large programmes. Experienced in Agile and Waterfall, leading functional and non functional testing, and introducing pragmatic automation with Playwright.</p>
+        <p class="muted">Active SC clearance · Based in GL16 · Open to contract or senior leadership work.</p>
+      </section>
+
+      <section id="skills" class="card">
+        <h2>Skills</h2>
+        <div class="pill-list">
+          <span class="pill">QA Strategy and Governance</span>
+          <span class="pill">Non functional testing</span>
+          <span class="pill">Performance and Accessibility</span>
+          <span class="pill">Compatibility and BrowserMatrix</span>
+          <span class="pill">Test Planning and Reporting</span>
+          <span class="pill">Stakeholder Management</span>
+          <span class="pill">Playwright TypeScript</span>
+          <span class="pill">Robot Framework</span>
+          <span class="pill">UFT One</span>
+          <span class="pill">JIRA and Confluence</span>
+          <span class="pill">Azure DevOps</span>
+          <span class="pill">Team Leadership and Hiring</span>
+        </div>
+      </section>
+
+      <!-- Experience timeline -->
+      <section id="experience" class="card">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="title">Head of QA <span class="org">· Welsh Revenue Authority</span></div>
+            <div class="meta">Sept 2024 to Present · Contract (Hybrid)</div>
+            <div class="muted">Established the QA function, defined strategy and standards, embedded a quality first mindset, introduced JIRA and Confluence and governance, co designed change process, and developed Playwright automation. Led testing across in house platforms and Dynamics 365.</div>
+          </div>
+          <div class="tl-item">
+            <div class="title">Non Functional Test Manager / Test Lead <span class="org">· Lloyds Banking Group (Embark)</span></div>
+            <div class="meta">Jan 2023 to Sept 2024 · Contract (Hybrid)</div>
+            <div class="muted">Managed performance, compatibility and accessibility testing across releases. Analysed NFRs. Vendor, resource and financial management. Set test standards. Coordinated initiatives. Supported operational resilience alignment with FCA SYSC 15A.</div>
+          </div>
+          <div class="tl-item">
+            <div class="title">QA Engineer <span class="org">· Sage</span></div>
+            <div class="meta">Aug 2022 to Jan 2023 · Contract (Remote)</div>
+            <div class="muted">Tested experimentation variants across products and regions using Oracle Maxymiser. BrowserStack for coverage. Produced analysis and reporting to inform A/B decisions.</div>
+          </div>
+          <div class="tl-item">
+            <div class="title">QA Engineer <span class="org">· Helastel (illumo digital)</span></div>
+            <div class="meta">Jun 2022 to Aug 2022 · Contract (Remote)</div>
+            <div class="muted">Reviewed, scripted and executed user stories on IQE. Contributed across Agile ceremonies. Delivered executive facing exit reports. Bridged capacity until permanent hires.</div>
+          </div>
+          <div class="tl-item">
+            <div class="title">Test Lead <span class="org">· Digivante</span></div>
+            <div class="meta">Oct 2020 to Jun 2022 · Permanent (Hybrid)</div>
+            <div class="muted">Led testing for multiple clients. Delivered consultancy across functional and non functional quality. Introduced Robot Framework automation. Mentored a remote team. Contributed to thought leadership.</div>
+          </div>
+          <div class="tl-item">
+            <div class="title">Earlier roles</div>
+            <div class="muted">Test leadership and analyst positions with Altus, Anana, TSB, Equiniti, multiple Lloyds Banking Group engagements, Bank of Ireland, Cloud Testers, SGN, EE, Rolls Royce and others from 2010 to 2020.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Highlights / Achievements -->
+      <section id="highlights" class="card">
+        <h2>Highlights</h2>
+        <ul class="rows">
+          <li>Built a QA function and test operating model aligned to delivery goals at WRA, improving visibility and quality across change.</li>
+          <li>Delivered performance, accessibility and compatibility testing at scale for a major FS programme, aligned to operational resilience standards.</li>
+          <li>Introduced pragmatic automation with Playwright and Robot Framework to accelerate feedback while maintaining coverage.</li>
+          <li>Contributed to a cross government group shaping QA and Test roles within the Government Digital and Data Profession capability framework.</li>
+        </ul>
+      </section>
+
+      <!-- Certifications / Education / Kudos -->
+      <section class="card">
+        <h2>Certifications and Education</h2>
+        <div class="rows">
+          <div>ISTQB Certified Tester – Foundation Level</div>
+          <div>ISTQB Certified Tester – Agile Tester Extension</div>
+          <div>A Levels · GCSEs</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Recommendations</h2>
+        <div class="kudos">
+          <div class="kudo">“Sam brings clarity, pace and a quality mindset to complex programmes. A strong leader who is hands on when it matters.”</div>
+          <div class="kudo">“Calm, structured and collaborative. Our testing matured rapidly under Sam’s guidance.”</div>
+        </div>
+        <p class="muted" style="margin-top:10px">Replace these with real quotes from LinkedIn recommendations.</p>
+      </section>
+    </div>
+
+    <!-- Contact -->
+    <section id="contact" class="card" style="margin-top:22px">
+      <h2>Contact</h2>
+      <div class="rows">
+        <div><strong>Email:</strong> <a href="mailto:sam.needs@gmail.com">sam.needs@gmail.com</a></div>
+        <div><strong>Phone:</strong> <a href="tel:+447415883191">+44 7415 883 191</a></div>
+        <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/samneeds/" rel="me">linkedin.com/in/samneeds</a></div>
+        <div><strong>Location:</strong> Coleford, GL16, UK</div>
+      </div>
+      <footer>
+        <a class="cta" href="#" id="download-cv" aria-label="Download CV">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3v12m0 0l4-4m-4 4l-4-4M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download CV
+        </a>
+        <a class="cta ghost" href="mailto:sam.needs@gmail.com">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6l8 6 8-6M4 18h16V6H4v12z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Email me
+        </a>
+      </footer>
+    </section>
+
+    <p class="muted" style="text-align:center;margin-top:16px">© <span id="year"></span> Sam Needs</p>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for in page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){
+          e.preventDefault();
+          window.scrollTo({top: el.getBoundingClientRect().top + window.pageYOffset - 14, behavior:'smooth'});
+        }
+      })
+    })
+
+    // CV file handling — set the path to your hosted CV file
+    const cvBtn = document.getElementById('download-cv');
+    cvBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      alert('Hook this to your hosted CV PDF, for example /files/sam-needs-cv.pdf');
+    });
+  </script>
+</body>
+</html>
